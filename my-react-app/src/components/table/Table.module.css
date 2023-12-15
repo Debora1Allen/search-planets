@@ -1,0 +1,42 @@
+
+.tableContainer {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+  
+  .filterContainer {
+    margin-bottom: 20px;
+  }
+  
+  @keyframes rotate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: rotate 30s linear infinite;
+    background: url(../../assets/stars.gif);
+  }
+  
+  th,
+  td {
+    color: white;
+    border: 1px solid white;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  
