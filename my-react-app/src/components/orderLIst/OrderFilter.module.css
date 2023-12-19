@@ -1,0 +1,73 @@
+
+.checkboxContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px;
+    position: relative;
+  top: -55px;
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .checkboxLabel {
+    margin-left: 0.5rem;
+    color: white;
+    margin-top: 100px;
+  }
+  
+  .checkboxInput {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none; /* Remove default checkbox styles */
+    margin-right: 5px;
+    margin-top: 105px; /* Adjust spacing between checkbox and label */
+  }
+  
+  .checkboxInput:checked {
+    background-color: yellow;
+  }
+  
+  .checkboxInput:focus {
+    outline: none; /* Remove focus outline on click */
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .orderButton {
+    padding: 0.5rem;
+    border: 1px solid yellow;
+    border-radius: 3px;
+    background-color: transparent;
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .orderButton:hover {
+    background-color: yellow;
+    color: black;
+  }
+
+  .selectInput{
+  margin-right: 5px;
+  border: none;
+  border-bottom: 1px solid white; /* White line at the bottom */
+  background-color: transparent;
+  color: white;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+}

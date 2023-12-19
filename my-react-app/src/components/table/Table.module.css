@@ -1,42 +1,116 @@
 
 .tableContainer {
-  padding: 20px;
-  max-width: 100%;
+  max-width: 1212px;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: baseline;
   overflow-x: auto;
+  margin-bottom: 3rem;
+ 
 }
-  
-  .filterContainer {
-    margin-bottom: 20px;
-  }
-  
-  @keyframes rotate {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
-  }
-  
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: rotate 30s linear infinite;
-    background: url(../../assets/stars.gif);
-  }
-  
-  th,
-  td {
-    color: white;
-    border: 1px solid white;
-  }
 
-  body {
-    font-family: 'Roboto', sans-serif; 
-  }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  width: 9.76113rem;
+  height: 4.375rem;
+  padding: 1rem;
+  border-radius: 0.0625rem 0rem 0rem 0rem;
+  border: 1px solid black;
+  background: #2E3035;
+  color: white;
+}
+
+.tableBody {
+  overflow-y: auto;
+  max-height: 24rem;
+  color: white;
+
+}
+
+.tableCell {
+  width: 9.76113rem;
+  height: 7.375rem;
+  text-align: center;
+  color: white; /* Set text color to white */
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem;
+  padding: 1rem;
+  border-bottom: 1px solid white; /* Add a white line between rows */
+}
+
+
+.expandedCell {
+  width: 22.25rem;
+}
+
+.emptyRow {
+  margin-top: 1rem;
+  height: 4rem;
+  width: 75.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+body {
+  background: url(../../assets/starwars.svg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.searchInputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  width: 671px;
+  height: 42px;
+  padding: 0.5rem;
+  border: 1px solid white; 
+  background-color: transparent;
+  color: white;
+  margin-right: 0.5rem;
   
-  
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  color: white; /* White search icon */
+  cursor: pointer;
+}
+
+/* You can customize the icon as needed */
+.searchIcon::before {
+  content: '\1F50D'; /* Unicode character for search icon */
+  font-size: 1rem;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1123px;
+  align-items: center;
+  margin: 2rem;
+}
+
+.filterContainer {
+  display: flex;
+  margin-bottom: 1rem;
+ position: relative;
+ left: 200px;
+}

@@ -1,0 +1,30 @@
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.selectInput,
+.numberInput {
+  border: none;
+  border-bottom: 1px solid white; /* White line at the bottom */
+  background-color: transparent;
+  color: white;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+}
+
+.filterButton {
+  border: 1px solid #FFD700; /* Yellow border */
+  background-color: transparent;
+  color: #FFD700; /* Yellow text color */
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.filterButton:hover {
+  background-color: #FFD700;
+  color: #2E3035; /* Dark color for text on hover */
+}

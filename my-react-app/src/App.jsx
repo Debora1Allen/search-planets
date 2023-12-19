@@ -1,12 +1,16 @@
 import './App.css';
 import Provider from './components/Provider';
 import Table from './components/table/Table';
+import globalStyles from './styles/globalStyles.module.css';
 
 function App() {
   return (
-    <Provider>
+    <div className={globalStyles.globalTextBold}>
+       <Provider>
       <Table />
     </Provider>
+    </div>
+   
   );
 }
 

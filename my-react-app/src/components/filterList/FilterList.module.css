@@ -1,0 +1,43 @@
+
+.filterContainer {
+    margin-bottom: 1rem;
+  }
+  
+  .filterItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .filterText {
+    margin-right: 0.5rem;
+    color: white;
+  }
+  
+  .removeFilterButton {
+    background-color: transparent;
+    color: #FFD700; /* Yellow color for text */
+    border: 1px solid #FFD700; /* Yellow border */
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+  
+  .removeFilterButton:hover {
+    background-color: #FFD700;
+    color: #2E3035; /* Dark color for text on hover */
+  }
+  
+  .clearFiltersButton {
+    background-color: transparent;
+    color: #FFD700; /* Yellow color for text */
+    border: 1px solid #FFD700; /* Yellow border */
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .clearFiltersButton:hover {
+    background-color: #FFD700;
+    color: #2E3035; /* Dark color for text on hover */
+  }
+  
+  

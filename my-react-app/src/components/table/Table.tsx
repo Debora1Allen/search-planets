@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { PlanetContext } from '../Provider';
-import Filter from '../Filter';
-import OrderFilter from '../OrderList';
+import Filter from '../filter/Filter';
+import OrderFilter from '../orderLIst/OrderList';
 import usePlanets from '../../hooks/usePlanets';
 import React from 'react';
 import styles from './Table.module.css';
@@ -39,54 +39,62 @@ function Table() {
   return (
     <div className={styles.tableContainer}>
       <div className={styles.filterContainer}>
-        <input
-          type="text"
-          value={ textFilter }
-          onChange={ ({ target }) => setTextFilter(target.value) }
-          data-testid="name-filter"
-        />
+        <div className={styles.searchInputContainer}>
+          <input
+            type="text"
+            value={textFilter}
+            onChange={({ target }) => setTextFilter(target.value)}
+            className={styles.searchInput}
+            data-testid="name-filter"
+            placeholder="Search"
+          />
+          <div className={styles.searchIcon} data-testid="search-icon" />
+        </div>
       </div>
-      <div className={styles.background} style={ { display: 'flex', gap: '2rem' } }>
-        <Filter />
-        <OrderFilter />
-      </div>
+    <div className={styles.pageContainer}>
+      <Filter />
+      <OrderFilter />
+    </div>
       {isLoading ? <p>Loading...</p> : (
-        <table>
+        <table  className={styles.table}>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Rotation period</th>
-              <th>Orbital period</th>
-              <th>Diameter</th>
-              <th>Climate</th>
-              <th>Gravity</th>
-              <th>Terrain</th>
-              <th>Surface water</th>
-              <th>Population</th>
-              <th>Films</th>
-              <th>Created</th>
-              <th>Edited</th>
-              <th>URL</th>
+              <th className={styles.tableHeader}>Name</th>
+              <th className={styles.tableHeader}>Rotation period</th>
+              <th className={styles.tableHeader}>Orbital period</th>
+              <th className={styles.tableHeader}>Diameter</th>
+              <th className={styles.tableHeader}>Climate</th>
+              <th className={styles.tableHeader}>Gravity</th>
+              <th className={styles.tableHeader}>Terrain</th>
+              <th className={styles.tableHeader}>Surface water</th>
+              <th className={styles.tableHeader}>Population</th>
+              <th className={styles.tableHeader}>Films</th>
+              <th className={styles.tableHeader}>Created</th>
+              <th className={styles.tableHeader}>Edited</th>
+              <th className={styles.tableHeader}>URL</th>
             </tr>
           </thead>
           <tbody>
             {filteredPlanets.map((planet) => (
               <tr key={ planet.name }>
-                <th data-testid="planet-name">{planet.name}</th>
-                <th>{planet.rotation_period}</th>
-                <th>{planet.orbital_period}</th>
-                <th>{planet.diameter}</th>
-                <th>{planet.climate}</th>
-                <th>{planet.gravity}</th>
-                <th>{planet.terrain}</th>
-                <th>{planet.surface_water}</th>
-                <th>{planet.population}</th>
-                <th>{planet.films}</th>
-                <th>{planet.created}</th>
-                <th>{planet.edited}</th>
-                <th>{planet.url}</th>
+                <th className={styles.tableCell} data-testid="planet-name">{planet.name}</th>
+                <th className={styles.tableCell} >{planet.rotation_period}</th>
+                <th className={styles.tableCell} >{planet.orbital_period}</th>
+                <th className={styles.tableCell} >{planet.diameter}</th>
+                <th className={styles.tableCell} >{planet.climate}</th>
+                <th className={styles.tableCell} >{planet.gravity}</th>
+                <th className={styles.tableCell} >{planet.terrain}</th>
+                <th className={styles.tableCell} >{planet.surface_water}</th>
+                <th className={styles.tableCell} >{planet.population}</th>
+                <th className={styles.tableCell} >{planet.films}</th>
+                <th className={styles.tableCell} >{planet.created}</th>
+                <th className={styles.tableCell} >{planet.edited}</th>
+                <th className={styles.tableCell} >{planet.url}</th>
               </tr>
             ))}
+              {filteredPlanets.length === 0 && (
+            <td className={styles.emptyRow}>Nenhum Planeta Encontrado</td>
+        )}
           </tbody>
         </table>
       )}
