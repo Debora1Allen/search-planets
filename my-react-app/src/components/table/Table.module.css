@@ -89,13 +89,13 @@ body {
   top: 50%;
   right: 0.5rem;
   transform: translateY(-50%);
-  color: white; /* White search icon */
+  color: white; 
   cursor: pointer;
 }
 
-/* You can customize the icon as needed */
+
 .searchIcon::before {
-  content: '\1F50D'; /* Unicode character for search icon */
+  content: '\1F50D'; 
   font-size: 1rem;
 }
 
@@ -113,4 +113,30 @@ body {
   margin-bottom: 1rem;
  position: relative;
  left: 200px;
+}
+
+.tableContainer::-webkit-scrollbar {
+  height: 12px;
+  background-color: transparent;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+  border-radius: 7px;
+}
+
+
+.tableContainer::-webkit-scrollbar-track {
+  height: 12px;
+  background-color: transparent;
+}
+
+.tableContainer::-webkit-scrollbar-thumb:vertical {
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+  border-radius: 7px;
+}
+
+
+.tableContainer::-webkit-scrollbar-button {
+  display: none;
 }
