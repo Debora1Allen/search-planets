@@ -71,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  margin-top: 300px;
 }
 
 .searchInput {
@@ -86,8 +87,8 @@ body {
 
 .searchIcon {
   position: absolute;
-  top: 50%;
-  right: 0.5rem;
+  top: 87%;
+  right: 2rem;
   transform: translateY(-50%);
   color: white; 
   cursor: pointer;
