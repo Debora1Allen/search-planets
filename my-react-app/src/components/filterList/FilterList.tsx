@@ -20,7 +20,7 @@ function FilterList() {
         ))}
       </div>
       <button onClick={clearFilters} className={styles.clearFiltersButton} data-testid="button-remove-filters">
-        Remove all filters
+        Remover Filtros
       </button>
     </div>
   );

@@ -1,10 +1,11 @@
 import { useContext, useState } from 'react';
 import { PlanetContext } from '../Provider';
 import Filter from '../filter/Filter';
-import OrderFilter from '../orderLIst/OrderList';
+import OrderFilter from '../orderLIst/OrderFilter';
 import usePlanets from '../../hooks/usePlanets';
 import React from 'react';
 import styles from './Table.module.css';
+import lupa from '../../assets/lupa.svg';
 
 
 function Table() {
@@ -39,17 +40,22 @@ function Table() {
   return (
     <div className={styles.tableContainer}>
       <div className={styles.filterContainer}>
-        <div className={styles.searchInputContainer}>
-          <input
-            type="text"
-            value={textFilter}
-            onChange={({ target }) => setTextFilter(target.value)}
-            className={styles.searchInput}
-            data-testid="name-filter"
-            placeholder="Search"
-          />
-          <div className={styles.searchIcon} data-testid="search-icon" />
-        </div>
+      <div className={styles.searchInputContainer}>
+  <input
+    type="text"
+    value={textFilter}
+    onChange={({ target }) => setTextFilter(target.value)}
+    className={styles.searchInput}
+    data-testid="name-filter"
+    placeholder="Search"
+  />
+  <img
+    src={lupa} 
+    alt="Search"
+    className={styles.searchIcon}
+    data-testid="search-icon"
+  />
+</div>
       </div>
     <div className={styles.pageContainer}>
       <Filter />

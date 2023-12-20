@@ -9,7 +9,7 @@
 .selectInput,
 .numberInput {
   border: none;
-  border-bottom: 1px solid white; /* White line at the bottom */
+  border-bottom: 1px solid white;
   background-color: transparent;
   color: white;
   margin-right: 0.5rem;
@@ -17,14 +17,14 @@
 }
 
 .filterButton {
-  border: 1px solid #FFD700; /* Yellow border */
+  border: 1px solid #FFD700; 
   background-color: transparent;
-  color: #FFD700; /* Yellow text color */
+  color: #FFD700; 
   padding: 0.5rem;
   cursor: pointer;
 }
 
 .filterButton:hover {
   background-color: #FFD700;
-  color: #2E3035; /* Dark color for text on hover */
+  color: #2E3035; 
 }

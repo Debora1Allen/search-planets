@@ -1,5 +1,3 @@
-// Filter.js
-
 import { useContext, useEffect, useState } from 'react';
 import { ColumnOptions, ComparisonOptions } from '../../utils/types';
 import useForm from '../../hooks/useForm';

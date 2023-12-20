@@ -1,14 +1,14 @@
 
 .tableContainer {
   max-width: 1212px;
-  max-height: 750px;
+  max-height: 740px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: baseline;
   overflow-x: auto;
   margin-bottom: 3rem;
- 
+  border: 1px solid #fff;
 }
 
 .table {
@@ -37,13 +37,13 @@
   width: 9.76113rem;
   height: 7.375rem;
   text-align: center;
-  color: white; /* Set text color to white */
+  color: white; 
   font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.125rem;
   padding: 1rem;
-  border-bottom: 1px solid white; /* Add a white line between rows */
+  border-bottom: 1px solid white; 
 }
 
 
@@ -64,6 +64,7 @@
 body {
   background: url(../../assets/starwars.svg) no-repeat center center fixed;
   background-size: cover;
+  background-color:#0D5140;
 }
 
 
@@ -122,7 +123,7 @@ body {
 }
 
 .tableContainer::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+  background-color: rgba(255, 255, 255, 0.5); 
   border-radius: 7px;
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 .tableContainer::-webkit-scrollbar-thumb:vertical {
-  background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 7px;
 }
 
